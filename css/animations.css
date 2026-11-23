@@ -1,0 +1,9 @@
+@keyframes shard{0%{opacity:1;transform:translate(0,0) rotate(0)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(160deg)}}
+@keyframes breathe{50%{opacity:.45}}
+@keyframes eq{50%{height:15px}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 1s ease,transform 1s var(--ease)}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}

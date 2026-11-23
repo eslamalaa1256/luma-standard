@@ -1,0 +1,13 @@
+:root{
+  --champagne:#F3E8D5; --gold:#B89565; --ivory:#FFFDF8; --taupe:#927B68;
+  --ink:#5a4a3d;           /* deep taupe for text (no black) */
+  --font-ar:"Tajawal",system-ui,sans-serif;
+  --font-serif:"Cormorant Garamond",Georgia,serif;
+  --font-sans:"Jost",system-ui,sans-serif;
+  --font-head:var(--font-serif); --font-body:var(--font-sans);
+  --space:clamp(4rem,12vw,9rem);
+  --shadow:0 24px 40px -18px rgba(110,84,58,.35),0 6px 12px -6px rgba(110,84,58,.25);
+  --paper:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .57 0 0 0 0 .48 0 0 0 0 .4 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  --ease:cubic-bezier(.65,.05,.25,1);
+}
+html[lang="ar"]{--font-head:var(--font-ar);--font-body:var(--font-ar)}

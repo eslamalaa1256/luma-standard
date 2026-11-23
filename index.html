@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LUMA</title>
+<meta name="theme-color" content="#F3E8D5">
+<link rel="icon" href="assets/images/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400&family=Tajawal:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/envelope.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/invitation.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="tools">
+  <button id="langBtn" class="pill" type="button">English</button>
+  <button id="musicBtn" class="pill music" type="button" hidden aria-pressed="false" data-aria="music"><span class="bars"><i></i><i></i><i></i></span></button>
+</div>
+
+<!-- ENVELOPE -->
+<div id="stage" class="stage">
+  <div class="env-wrap">
+    <div id="envelope" class="envelope">
+      <div class="env-back"></div>
+      <div class="env-card"><div class="env-card-in"><span class="ec-names"><span data-name="0"></span> <i>&amp;</i> <span data-name="1"></span></span></div></div>
+      <div class="env-front"><span class="pk pk-l"></span><span class="pk pk-r"></span><span class="pk pk-b"></span></div>
+      <div class="env-flap"><span class="flap-face flap-out"></span><span class="flap-face flap-in"></span></div>
+      <button id="seal" class="seal" type="button" data-aria="tap">
+        <span class="seal-half sl"></span><span class="seal-half sr"></span>
+        <span class="shard s1"></span><span class="shard s2"></span><span class="shard s3"></span><span class="shard s4"></span>
+        <b class="seal-mark">L</b>
+      </button>
+    </div>
+    <p class="tap" data-i18n="tap"></p>
+  </div>
+</div>
+
+<!-- INVITATION -->
+<main id="invitation" class="invitation" hidden>
+  <section id="hero" class="hero">
+    <div class="hero-photo"><img id="heroImg" alt=""></div>
+    <div class="hero-copy">
+      <p class="intro" data-c="intro"></p>
+      <h1><span data-name="0"></span><span class="amp">&amp;</span><span data-name="1"></span></h1>
+    </div>
+  </section>
+
+  <section class="message reveal">
+    <h2 data-c="messageTitle"></h2>
+    <p data-c="message"></p>
+    <span class="rule"></span>
+  </section>
+
+  <section class="details reveal">
+    <dl>
+      <div><dt data-i18n="date"></dt><dd data-c="dateText"></dd></div>
+      <div><dt data-i18n="time"></dt><dd data-c="timeText"></dd></div>
+      <div><dt data-i18n="venue"></dt><dd><span data-c="venueName"></span><small data-c="venueAddress"></small></dd></div>
+    </dl>
+  </section>
+
+  <section class="countdown reveal" aria-live="off">
+    <div id="countdown" class="cd">
+      <div><b data-u="d">00</b><span data-i18n="days"></span></div>
+      <div><b data-u="h">00</b><span data-i18n="hours"></span></div>
+      <div><b data-u="m">00</b><span data-i18n="minutes"></span></div>
+      <div><b data-u="s">00</b><span data-i18n="seconds"></span></div>
+    </div>
+    <p id="cdDone" class="cd-done" hidden data-i18n="started"></p>
+  </section>
+
+  <section class="gallery reveal">
+    <h2 data-i18n="gallery"></h2>
+    <div id="galleryGrid" class="g-grid"></div>
+  </section>
+
+  <section class="venue reveal">
+    <h2 data-i18n="location"></h2>
+    <p class="v-name" data-c="venueName"></p>
+    <p class="v-addr" data-c="venueAddress"></p>
+    <div id="mapBox" class="map"><p data-i18n="noMap"></p></div>
+    <a id="dirBtn" class="btn" target="_blank" rel="noopener" href="#" data-i18n="directions"></a>
+  </section>
+
+  <section class="closing reveal">
+    <p class="c-msg" data-c="closing"></p>
+    <p class="c-sign" data-c="signoff"></p>
+    <p class="brand">LUMA<small>Make Every Moment Special.</small></p>
+  </section>
+</main>
+
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" hidden>
+  <button id="lbClose" class="lb-btn lb-x" type="button" data-aria="close">&times;</button>
+  <button id="lbPrev" class="lb-btn lb-p" type="button" data-aria="prev">&#8249;</button>
+  <img id="lbImg" alt="">
+  <button id="lbNext" class="lb-btn lb-n" type="button" data-aria="next">&#8250;</button>
+  <span id="lbCount" class="lb-count"></span>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/language.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/music.js"></script>
+<script src="js/map.js"></script>
+<script src="js/envelope.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

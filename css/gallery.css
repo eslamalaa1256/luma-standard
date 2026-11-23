@@ -1,0 +1,21 @@
+.gallery{padding-inline:.75rem}
+.g-grid{margin-top:2.5rem;display:grid;grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(110px,28vw,200px);grid-auto-flow:dense;gap:.6rem;max-width:1100px;margin-inline:auto}
+.g-item{padding:0;border:0;background:var(--champagne);overflow:hidden;cursor:zoom-in;position:relative}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.g-item:hover img{transform:scale(1.04)}
+.g-item.missing::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,var(--champagne),var(--gold))}
+/* pattern repeats every 6 images; grid placement guarantees no overlap */
+.g-0{grid-row:span 2}
+.g-1{grid-column:span 1}
+.g-2{grid-row:span 1}
+.g-3{grid-column:span 2}
+.g-4{grid-row:span 2}
+.g-5{grid-row:span 1}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(70,56,44,.94);display:grid;place-items:center;padding:3.5rem 1rem}
+.lightbox img{max-width:100%;max-height:100%;object-fit:contain;opacity:0;transition:opacity .4s}
+.lightbox img.in{opacity:1}
+.lb-btn{position:absolute;width:48px;height:48px;border:1px solid rgba(243,232,213,.5);border-radius:50%;background:transparent;color:var(--champagne);font-size:1.8rem;line-height:1;cursor:pointer}
+.lb-btn:hover{background:rgba(243,232,213,.15)}
+.lb-x{inset-block-start:max(.8rem,env(safe-area-inset-top));inset-inline-end:.8rem}
+.lb-p{inset-block-end:.8rem;left:calc(50% - 64px)}.lb-n{inset-block-end:.8rem;left:calc(50% + 16px)}
+.lb-count{position:absolute;inset-block-start:1.2rem;inset-inline-start:1.2rem;color:var(--champagne);font:400 .95rem var(--font-sans);direction:ltr}
